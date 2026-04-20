@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <div class="lock-icon">🔐</div>
+      <h1>Password Generator</h1>
+      <p class="subtitle">Kuchli parol yarating</p>
+    </header>
+
+    <!-- Password Display -->
+    <div class="password-box">
+      <span class="password-text" id="password">Parol yaratish uchun bosing</span>
+      <button class="copy-btn" id="copy-btn" title="Nusxalash">
+        <span id="copy-icon">📋</span>
+      </button>
+    </div>
+
+    <!-- Strength Bar -->
+    <div class="strength-wrap">
+      <span class="strength-label">Kuchlilik:</span>
+      <div class="strength-bars">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+        <div class="bar" id="bar4"></div>
+      </div>
+      <span class="strength-text" id="strength-text">—</span>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings-card">
+
+      <!-- Length -->
+      <div class="setting-row">
+        <label class="setting-label">Uzunlik</label>
+        <div class="length-control">
+          <input type="range" id="length" min="4" max="32" value="12" />
+          <span class="length-value" id="length-value">12</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Checkboxes -->
+      <div class="setting-row">
+        <label class="setting-label">Katta harflar</label>
+        <label class="toggle">
+          <input type="checkbox" id="uppercase" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <label class="setting-label">Kichik harflar</label>
+        <label class="toggle">
+          <input type="checkbox" id="lowercase" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <label class="setting-label">Raqamlar</label>
+        <label class="toggle">
+          <input type="checkbox" id="numbers" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <label class="setting-label">Belgilar (!@#$)</label>
+        <label class="toggle">
+          <input type="checkbox" id="symbols" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </div>
+
+    <!-- Generate Button -->
+    <button class="generate-btn" id="generate-btn">⚡ Parol yaratish</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
